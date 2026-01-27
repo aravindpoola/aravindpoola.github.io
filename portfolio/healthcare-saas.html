@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Salesforce Administrator Portfolio – US Healthcare SaaS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 40px;
+      line-height: 1.7;
+      color: #2c2c2c;
+      background-color: #ffffff;
+    }
+
+    h1 {
+      color: #0b5cab;
+      border-bottom: 3px solid #0b5cab;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      color: #0b5cab;
+      margin-top: 40px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 6px;
+    }
+
+    h3 {
+      color: #333;
+      margin-top: 25px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    ul {
+      margin-left: 25px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .section {
+      margin-top: 35px;
+    }
+
+    .meta {
+      background-color: #f4f6f9;
+      padding: 15px;
+      border-left: 5px solid #0b5cab;
+      margin: 20px 0;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #555;
+      border-top: 1px solid #ccc;
+      padding-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Salesforce Administrator Portfolio</h1>
+
+<h2>Salesforce CRM Implementation for US Healthcare SaaS Company</h2>
+
+<div class="meta">
+  <p><strong>Role:</strong> Salesforce Administrator (Portfolio / Independent Project)</p>
+  <p><strong>Duration:</strong> Dec 2025 – Present</p>
+  <p><strong>Platform:</strong> Salesforce Sales Cloud & Service Cloud (Developer Edition)</p>
+  <p><strong>Industry Focus:</strong> US Healthcare SaaS</p>
+</div>
+
+<div class="section">
+  <h2>1. Project Overview</h2>
+  <p>
+    This portfolio project demonstrates end-to-end Salesforce administration skills using a realistic
+    US healthcare SaaS business scenario. The objective was to design, configure, and manage a scalable
+    Salesforce CRM solution that supports sales operations, provider support, automation, data integrity,
+    and reporting while following US best practices and healthcare-aware access controls.
+  </p>
+</div>
+
+<div class="section">
+  <h2>2. Business Scenario</h2>
+  <p>
+    The business scenario represents a <strong>mid-sized US-based healthcare SaaS company</strong> that
+    provides a patient engagement and provider management platform to hospitals and clinics.
+  </p>
+  <p>Salesforce is used as the primary CRM system to manage:</p>
+  <ul>
+    <li>Healthcare providers (Accounts)</li>
+    <li>Provider staff and patient liaisons (Contacts)</li>
+    <li>SaaS subscription sales (Opportunities)</li>
+    <li>Support cases and patient-related requests</li>
+    <li>Compliance-sensitive workflows</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>3. Business Challenges</h2>
+  <ul>
+    <li>Inconsistent data entry across sales and support teams</li>
+    <li>Manual processes causing delays and errors</li>
+    <li>Limited visibility into sales pipeline and support workload</li>
+    <li>Need for strict role-based access due to healthcare compliance requirements</li>
+    <li>Lack of standardized reporting for leadership</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>4. Business Requirements</h2>
+
+  <h3>Functional Requirements</h3>
+  <ul>
+    <li>Centralized CRM for sales and support operations</li>
+    <li>Automation to reduce manual effort</li>
+    <li>Role-based access control</li>
+    <li>Reliable and accurate reporting</li>
+    <li>Scalable configuration aligned with US healthcare operations</li>
+  </ul>
+
+  <h3>Non-Functional Requirements</h3>
+  <ul>
+    <li>Data integrity and validation</li>
+    <li>Audit-friendly configuration</li>
+    <li>Secure access model</li>
+    <li>Ease of use and user adoption</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>5. Salesforce Solution Overview</h2>
+  <p>
+    Salesforce was implemented using <strong>Sales Cloud and Service Cloud</strong> to meet business
+    requirements. The solution focused on declarative configuration, automation using Flows,
+    strong security controls, and actionable reporting.
+  </p>
+</div>
+
+<div class="section">
+  <h2>6. Data Model Design</h2>
+
+  <h3>Standard Objects</h3>
+  <ul>
+    <li><strong>Account:</strong> Healthcare providers (Hospitals, Clinics)</li>
+    <li><strong>Contact:</strong> Provider staff and patient liaisons</li>
+    <li><strong>Opportunity:</strong> SaaS subscription deals</li>
+    <li><strong>Case:</strong> Support requests</li>
+  </ul>
+
+  <h3>Custom Object – Patient_Request__c</h3>
+  <p><strong>Purpose:</strong></p>
+  <ul>
+    <li>Track patient onboarding issues</li>
+    <li>Handle access and data correction requests</li>
+    <li>Manage compliance-related requests</li>
+  </ul>
+
+  <p><strong>Key Fields:</strong></p>
+  <ul>
+    <li>Request Type (Picklist)</li>
+    <li>Priority (Picklist)</li>
+    <li>Status (Picklist)</li>
+    <li>Due Date (Date)</li>
+  </ul>
+
+  <p><strong>Relationships:</strong></p>
+  <ul>
+    <li>Lookup to Account</li>
+    <li>Lookup to Contact</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>7. Security Model</h2>
+
+  <h3>Role Hierarchy</h3>
+  <ul>
+    <li>Sales Representative</li>
+    <li>Sales Manager</li>
+    <li>Support Agent</li>
+    <li>Compliance Officer</li>
+    <li>System Administrator</li>
+  </ul>
+
+  <h3>Profiles</h3>
+  <ul>
+    <li>Sales User</li>
+    <li>Support User</li>
+    <li>Compliance User</li>
+  </ul>
+
+  <h3>Permission Sets</h3>
+  <ul>
+    <li>Reporting Access</li>
+    <li>Patient Request Access</li>
+    <li>Compliance Read Only</li>
+  </ul>
+
+  <p>
+    Permission Sets were used to extend access instead of creating multiple profiles,
+    following Salesforce and US enterprise best practices.
+  </p>
+</div>
+
+<div class="section">
+  <h2>8. Automation Using Salesforce Flows</h2>
+
+  <h3>Flow 1: Opportunity Automation</h3>
+  <ul>
+    <li>Type: Record-Triggered Flow</li>
+    <li>Automatically updates Opportunity stage</li>
+    <li>Populates subscription start date</li>
+    <li>Validates required subscription fields</li>
+  </ul>
+
+  <h3>Flow 2: Patient Request Intake</h3>
+  <ul>
+    <li>Type: Screen Flow</li>
+    <li>Guided request creation for support users</li>
+    <li>Auto-assigns priority and ownership</li>
+    <li>Creates follow-up tasks</li>
+  </ul>
+
+  <h3>Flow 3: Case Escalation</h3>
+  <ul>
+    <li>Type: Record-Triggered Flow</li>
+    <li>Escalates cases open longer than defined SLA</li>
+    <li>Updates priority and notifies managers</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>9. Data Management & Quality</h2>
+  <ul>
+    <li>Imported sample data using Data Loader</li>
+    <li>Identified and resolved duplicate records</li>
+    <li>Performed data audits and cleanup</li>
+    <li>Enforced validation rules for required fields</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>10. Reports & Dashboards</h2>
+
+  <h3>Key Reports</h3>
+  <ul>
+    <li>Sales Pipeline by Provider Type</li>
+    <li>Open Patient Requests by Priority</li>
+    <li>Case Resolution Time</li>
+    <li>Data Quality Exception Report</li>
+  </ul>
+
+  <h3>Executive Dashboard – Healthcare Operations Dashboard</h3>
+  <ul>
+    <li>Sales pipeline visibility</li>
+    <li>Support workload overview</li>
+    <li>Compliance-related request tracking</li>
+    <li>Operational performance metrics</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>11. User Support & Testing</h2>
+  <p>Simulated real-world admin scenarios:</p>
+  <ul>
+    <li>User access issues</li>
+    <li>Flow execution errors</li>
+    <li>Validation failures</li>
+  </ul>
+  <p>
+    For each issue, root cause was identified, configuration or automation was corrected,
+    and changes were tested and validated.
+  </p>
+</div>
+
+<div class="section">
+  <h2>12. Documentation & Enablement</h2>
+  <ul>
+    <li>User onboarding guides</li>
+    <li>Flow usage documentation</li>
+    <li>Admin configuration notes</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>13. Key Learnings</h2>
+  <ul>
+    <li>Designing scalable security models is critical in regulated industries</li>
+    <li>Salesforce Flows can replace most legacy automation</li>
+    <li>Data quality directly impacts reporting and adoption</li>
+    <li>Clear documentation improves admin efficiency</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>14. Tools & Technologies Used</h2>
+  <ul>
+    <li>Salesforce Lightning Experience</li>
+    <li>Sales Cloud & Service Cloud</li>
+    <li>Record-Triggered and Screen Flows</li>
+    <li>Data Loader</li>
+    <li>Reports & Dashboards</li>
+    <li>Roles, Profiles, and Permission Sets</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>15. Conclusion</h2>
+  <p>
+    This portfolio project demonstrates hands-on Salesforce Administrator capabilities aligned
+    with real-world US healthcare SaaS business requirements. It reflects end-to-end ownership
+    of Salesforce configuration, automation, security, data management, and reporting,
+    showcasing readiness for Salesforce Administrator and Business Systems roles in the US market.
+  </p>
+</div>
+
+<footer>
+  <p>© 2026 Aravind Poola | Salesforce Administrator Portfolio</p>
+</footer>
+
+</body>
+</html>
